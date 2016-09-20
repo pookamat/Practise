@@ -19,25 +19,26 @@ public class StringManipulationStrategy implements StringStrategy {
         return _instance;
     }
 
+    @Override
     public void changeCase(StringBuilder s) {
         int i;
-        StringBuilder temp = new StringBuilder(s);
-        s.replace(0,s.length(),"");
-        if(temp== null){
+        //StringBuilder temp = new StringBuilder(s);
+        //s.replace(0,s.length(),"");
+        if(s== null){
             throw new NullPointerException("String is null");
         }
         else {
-            for (i = 0; i < temp.length(); i++) {
-                int ch = temp.charAt(i);
+            for (i = 0; i < s.length(); i++) {
+                int ch = s.charAt(i);
                 if (ch > 64 && ch < 91) {
                     ch = ch + 32;
-                    s.append((char) ch);
+                    s.setCharAt(i,(char) ch);
                 } else if (ch > 96 && ch < 123) {
                     ch = ch - 32;
-                    s.append((char) ch);
+                    s.setCharAt(i,(char) ch);
                 }
                 if (ch == 32)
-                    s.append((char) ch);
+                    s.setCharAt(i,(char) ch);
             }
         }
     }

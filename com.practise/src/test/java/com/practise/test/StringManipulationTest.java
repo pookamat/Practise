@@ -26,7 +26,7 @@ public class StringManipulationTest {
         catch (Exception e){
             ex=e;
         }
-        Assert.assertTrue(ex!=null && ex instanceof NullPointerException && ex.getMessage().equals("String is null"));
+        Assert.assertTrue(ex!=null && ex.getMessage().equals("String is null"));
     }
 
     @Test
