@@ -19,11 +19,11 @@ public class StringManipulationStrategy implements StringStrategy {
         return _instance;
     }
 
-    @Override
+    
     public void changeCase(StringBuilder s) {
         int i;
-        //StringBuilder temp = new StringBuilder(s);
-        //s.replace(0,s.length(),"");
+       /* StringBuilder temp = new StringBuilder(s);
+        s.replace(0,s.length(),"");*/
         if(s== null){
             throw new NullPointerException("String is null");
         }
